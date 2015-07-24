@@ -26,10 +26,10 @@ header{
 }
 
 
-#main-logo > a > img {
+#main-logo > a > div{
 	margin: 10px;
-	animation-name: rotar;
-	animation-duration: 5s;
+	animation-name: cambiar;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
@@ -110,10 +110,25 @@ footer{
 	border-color: #E9CE7A;
 }
 
-@keyframes rotar {
-	0% {transform:rotate(0deg);}
-	100% {transform:rotate(-90deg);}
+@keyframes cambiar {
+	0% {opacity: 1; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	10% {opacity: 0.8; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	20% {opacity: 0.6; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	30% {opacity: 0.4; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	40% {opacity: 0.2; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	50% {opacity: 0; width: 50px; height: 60px; background-image: url(../logo/lg.png);}
+	60% {opacity: 0.2; width: 60px; height: 50px; background-image: url(../logo/lg1.png);}
+	70% {opacity: 0.4; width: 60px; height: 50px; background-image: url(../logo/lg1.png);}
+	80% {opacity: 0.6; width: 60px; height: 50px; background-image: url(../logo/lg1.png);}
+	90% {opacity: 0.8; width: 60px; height: 50px; background-image: url(../logo/lg1.png);}
+	100% {opacity: 1; width: 60px; height: 50px; background-image: url(../logo/lg1.png);}
 }
 footer > .container{
 	padding: 15px;
+}
+#unicor{
+	width: 50px;
+	height: 60px;
+	background-image: url(../img/unicor.png);
+	background-repeat: no-repeat;
 }
