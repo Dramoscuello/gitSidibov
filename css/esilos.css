@@ -9,7 +9,7 @@ header{
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 1000;
 	box-shadow: 0 1px 5px #999;
 }
 #main-header {
@@ -25,16 +25,13 @@ header{
 	background-color: rgb(128,168,149);
 }
 
-#main-logo > a {
-	font-size: 25px;
-	font-size: 2.5rem;
-	font-weight: 600;
-	color: #fff;
-	text-decoration: none;
-}
 
 #main-logo > a > img {
 	margin: 10px;
+	animation-name: rotar;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 #main-menu {
 	float:right;
@@ -74,19 +71,27 @@ header{
 #main-menu.nav .open>a:focus {
 	background: none;
 }
-.main-seccion{
-	background: #F4F0E2;
+
+#main-seccion > div > div > div > h1{
+	font-size: 60px;
+	font-weight: bold;
+	font-family: 'Bree Serif', serif;
+	text-align: center;
+}
+#main-seccion > div > div > div > h2{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Bree Serif', serif;
+	text-align: center;
 }
 footer{
-	bottom: 0;
-	right: 0;
-	left: 0;
 	background: #3A3329;
 	color: white;
 }
 
 .social > ul{
-	list-style: none;
+	list-style-type: none;
+	list-style-position: inside;
 }
 .social > ul > li{
 	float: left;
@@ -103,4 +108,12 @@ footer{
 .user > .btn-group > .btn-primary:focus{
 	background: #E9CE7A;
 	border-color: #E9CE7A;
+}
+
+@keyframes rotar {
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(-90deg);}
+}
+footer > .container{
+	padding: 15px;
 }
